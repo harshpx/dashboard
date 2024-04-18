@@ -30,6 +30,9 @@ const CustomHorizontalBarChart = ({source,color,title,xlabel,ylabel}) => {
             },
             scales: {
                 x: {
+                    ticks: {
+                        color: 'white'
+                    },
                     max: 100,
                     title: {
                         display: true,
@@ -50,6 +53,9 @@ const CustomHorizontalBarChart = ({source,color,title,xlabel,ylabel}) => {
                             size: 14,
                             weight: ''
                         }
+                    },
+                    ticks: {
+                        color: 'white'
                     },
                 }
             }

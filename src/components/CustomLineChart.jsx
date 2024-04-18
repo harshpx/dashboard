@@ -38,6 +38,9 @@ const CustomLineChart = ({source,color,title,xlabel,ylabel}) => {
                             weight: ''
                         }
                     },
+                    ticks: {
+                        color: 'white'
+                    },
                 },
                 y: {
                     title: {
@@ -51,6 +54,7 @@ const CustomLineChart = ({source,color,title,xlabel,ylabel}) => {
                     },
                     ticks: {
                         stepSize: 1,
+                        color:'white'
                     }
 
                 }
