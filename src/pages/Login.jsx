@@ -29,7 +29,7 @@ const Login = () => {
           <LuSettings2 size={24}/>
           <h1 className=''>Login To Dashboard</h1>
         </div>
-        <input type="text" name="username" value={currUser} onChange={(e)=>setCurrUser(e.target.value)} placeholder='Enter your name' className='leading-10 px-4 rounded-lg'/>
+        <input type="text" name="username" value={currUser} onChange={(e)=>setCurrUser(e.target.value)} placeholder='Enter your name' className='leading-10 px-4 rounded-lg w-full lg:w-3/4'/>
         <button onClick={loginHandler} className='px-3 py-1 rounded-lg bg-cyan-600 text-white hover:scale-110 duration-150'>Login</button>
       </div>
     </div>

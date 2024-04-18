@@ -13,7 +13,7 @@ const Layout = () => {
     useEffect(()=>{
         if(!savedUser) navigate('/Login');
         else {
-            navigate('/Dashboard');
+            navigate('/Insights')
             login(savedUser);
         }
     },[])
@@ -21,9 +21,9 @@ const Layout = () => {
     return (
         <div className='min-h-screen min-w-full bg-neutral-800 flex items-center justify-center text-white overflow-hidden'>
             <Navbar/>
-            <div className='flex items-center w-full mt-12 overflow-hidden'>
+            <div className='flex flex-wrap md:flex-nowrap items-center w-full overflow-hidden'>
                 <Sidebar/>
-                <div className='p-2 min-h-screen'>
+                <div className='p-2 h-screen overflow-scroll w-full'>
                     <Outlet/>
                 </div>
             </div>

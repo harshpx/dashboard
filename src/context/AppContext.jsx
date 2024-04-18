@@ -10,11 +10,8 @@ const AppContext = createContext({
 
 export const AppContextProvider = ({children})=>{
     const [userName,setUserName] = useState("");
-    const [showSidebar,setShowSidebar] = useState(true);
+    const [showSidebar,toggleSidebar] = useState(false);
 
-    const toggleSidebar = ()=>{
-        setShowSidebar(prev=>!prev);
-    }
 
     const login = (username)=>{
         setUserName(username);
