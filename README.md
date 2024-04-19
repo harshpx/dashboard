@@ -9,3 +9,11 @@ npm install
 npm run dev
 ```
 
+### Also Deployed on Vercel (live link): [https://dashboard-harshpx.vercel.app/Login](https://dashboard-harshpx.vercel.app/Login)
+
+## Features
+* Clean and Responsive UI (looks awesome on all screen sizes) using Tailwind CSS
+* Interactive Data Representation using Chart.js
+* Sort and Filter functionality
+* Modular and Well-Structured code
+

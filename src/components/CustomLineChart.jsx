@@ -1,7 +1,9 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+import useWindowWidth from '../hooks/useWindowWidth.js'
 
 const CustomLineChart = ({source,color,title,xlabel,ylabel}) => {
+    const {isMobile} = useWindowWidth()
     return (
         <Line data={{
             labels: Array.from(source.keys()),
@@ -9,17 +11,23 @@ const CustomLineChart = ({source,color,title,xlabel,ylabel}) => {
                 data: Array.from(source.values()),
                 borderColor: `${color}`,
                 backgroundColor: `${color}`,
+                borderWidth: isMobile ? 1 : 4,
             }]
         }} options={{
             responsive: true,
             maintainAspectRatio: false,
+            elements: {
+                line: {
+                  tension: 0.5,
+                },
+            },  
             plugins: {
                 legend: {
                     display: false,
                 },
                 title: {
                     display: true,
-                    text: `${title}`, // Set your chart title here
+                    text: `${title}`,
                     color: 'white',
                     font: {
                         size: 18,
