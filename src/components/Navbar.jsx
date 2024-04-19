@@ -4,9 +4,11 @@ import { FaUserCircle } from "react-icons/fa";
 import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useWindowWidth from '../hooks/useWindowWidth';
 
 const Navbar = () => {
   const {userName,showSidebar,toggleSidebar,logout} = useContext(AppContext);
+  const {isMobile} = useWindowWidth();
   const navigate = useNavigate();
   const location = useLocation();
   const logoutHandler = ()=>{
@@ -16,11 +18,11 @@ const Navbar = () => {
   return (
     <div className='w-full absolute top-0 left-0 bg-neutral-900 min-h-12 px-5 py-1 flex justify-between items-center text-center'>
         <div className='flex items-center justify-center gap-x-4'>
-            <div onClick={()=>toggleSidebar(prev=>!prev)} className='text-white p-2 hover:bg-neutral-600 rounded-lg cursor-pointer'>
+            {isMobile ? null : <div onClick={()=>toggleSidebar(prev=>!prev)} className='text-white p-2 hover:bg-neutral-600 rounded-lg cursor-pointer'>
               {showSidebar ? <RiMenuFoldFill/>:<RiMenuUnfoldFill/>}
-            </div>
-            <h1>{location.pathname.slice(1,location.pathname.length)}</h1>
-            </div>
+            </div>}
+            <h1 className='text-xl'>{location.pathname.slice(1,location.pathname.length)}</h1>
+        </div>
         <div className='flex items-center justify-center gap-x-4'>
             <div className='flex gap-x-1 items-center justify-center'>
               <FaUserCircle size={22}/>

@@ -8,10 +8,11 @@ import useWindowWidth from '../hooks/useWindowWidth';
 
 const MenuItem = ({name,icon})=>{
   const {showSidebar} = useContext(AppContext);
+  const {isMobile} = useWindowWidth();
   return (
     <NavLink to={`/${name}`} className={({isActive}) => `${isActive ? 'bg-cyan-600' : 'bg-neutral-600'} hover:bg-cyan-600 hover:scale-105 transition-all duration-200 rounded-lg md:w-full px-4 h-12 flex items-center ${showSidebar ? "justify-start" : "justify-center"} gap-2`}>
       {icon}
-      {showSidebar ? name : ""}
+      {showSidebar && !isMobile ? name : ""}
     </NavLink>
   )
 }
