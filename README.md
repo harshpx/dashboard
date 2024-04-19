@@ -13,7 +13,31 @@ npm run dev
 
 ## Features
 * Clean and Responsive UI (looks awesome on all screen sizes) using Tailwind CSS
-* Interactive Data Representation using Chart.js
-* Sort and Filter functionality
+* Interactive Data Visualization using Chart.js
+* Data Sort and Filter functionality
 * Modular and Well-Structured code
 
+## Screenshots
+<div>
+<h3 style=''>Big Screens</h3>
+<img src='./src/assets/ss/ss1.png'/>
+<img src='./src/assets/ss/ss2.png'/>
+</div>
+
+<div style='display:flex; flex-direction:column; gap:0.5em'>
+    <h3 style=''>Small Screens</h3>
+    <div style='display:flex; gap:0.5em'>
+        <img src='./src/assets/ss/ss3.jpeg' style='width:70%; height:70%'/>
+        <img src='./src/assets/ss/ss4.jpeg' style='width:70%; height:70%'/>
+    </div>
+    <div style='display:flex; gap:0.5em'>
+        <img src='./src/assets/ss/ss5.jpeg' style='width:70%; height:70%'/>
+        <img src='./src/assets/ss/ss6.jpeg' style='width:70%; height:70%'/>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+### Made with &hearts; by Harsh Priye
