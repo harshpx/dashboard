@@ -38,7 +38,7 @@ const Login = () => {
           <LuSettings2 size={24}/>
           <h1 className='w-full'>Login To Dashboard</h1>
         </div>
-        <input type="text" name="username" value={currUser} onChange={(e)=>setCurrUser(e.target.value)} placeholder='Enter your name' className='leading-10 px-4 rounded-lg w-full lg:w-3/4'/>
+        <input type="text" name="username" value={currUser} onChange={(e)=>setCurrUser(e.target.value)} placeholder='Enter your name' className='leading-10 px-4 rounded-lg w-full lg:w-3/4 text-center placeholder:text-center focus:outline-none focus:ring-0 transition-all duration-200 hover:scale-105'/>
         <button onClick={loginHandler} className='px-3 py-1 rounded-lg bg-cyan-600 text-white hover:scale-110 duration-150'>Login</button>
       </div>
       <div className='absolute bottom-3 lg:text-lg text-white'>Made with &hearts; by Harsh Priye</div>
