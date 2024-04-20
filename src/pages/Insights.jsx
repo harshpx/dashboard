@@ -20,11 +20,11 @@ const Insights = () => {
 			<div className='p-4 rounded-xl bg-black h-[400px]'>
 				<CustomHorizontalBarChart source={bottom5CandidateData} color={'#ae0004'} title="Bottom 5 Candidates" xlabel="Scores" ylabel="Candidates"/>
 			</div>
-			<div className='p-4 rounded-xl bg-black h-[400px]'>
-				<CustomLineChart source={interviewRoundsData} color={`#0891b2`} title='Candidate Count for a particular Interview Round'/>
-			</div>
-			<div className='lg:col-span-2 p-4 rounded-xl flex items-center justify-center bg-black h-[400px]'>
+			<div className='p-4 rounded-xl bg-black h-[400px] sm:pr-4 md:pr-16 lg:pr-4 xl:pr-16'>
 				<CustomDoughnut source={performanceCategoryData} title='Performance Categories'/>
+			</div>
+			<div className='lg:col-span-2 p-4 xl:px-24 rounded-xl flex items-center justify-center bg-black h-[300px]  md:h-[500px]'>
+				<CustomLineChart source={interviewRoundsData} color={`#0891b2`} title='Candidate Count for a particular Interview Round'/>
 			</div>
 		</div>
 	)

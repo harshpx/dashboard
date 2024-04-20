@@ -32,7 +32,7 @@ const CustomDoughnut = ({source,color,title}) => {
                     }
                 },
                 legend: {
-                    // position: 'right',
+                    position: 'right',
                     labels: {
                         display: true,
                         padding: 20,
